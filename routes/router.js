@@ -4,7 +4,7 @@ const router = require('express').Router();
 //const dbModel = include('staticData');
 const userModel = include('models/web_user')
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 	console.log("page hit");
 	try {
 		const users = await userModel.findAll({

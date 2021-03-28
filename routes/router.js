@@ -148,13 +148,13 @@ router.get('/pets', async (req, res) => {
 			attributes: ['pet_id', 'name', 'pet_type_id', 'web_user_id' ]
 		})
 
-		if (users === null) {
+		if (pets === null) {
 			res.render('error', {
 				message: 'Error connecting to MySQL'
 			})
 		} else {
-			console.log(users)
-			res.render('pet', {allUsers: users})
+			console.log(pets)
+			res.render('pet', {allPets: pets})
 		}
 	} catch(ex) {
 		res.render('error', {

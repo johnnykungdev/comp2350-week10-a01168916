@@ -145,7 +145,7 @@ router.get('/pets', async (req, res) => {
 	console.log("page hit");
 	try {
 		const pets = await petModel.findAll({
-			attributes: ['pet_id', 'name', 'pet_type', 'web_user_id' ]
+			attributes: ['pet_id', 'name', 'pet_type_id', 'web_user_id' ]
 		})
 
 		if (users === null) {

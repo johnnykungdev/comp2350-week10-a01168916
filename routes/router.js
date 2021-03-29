@@ -182,7 +182,7 @@ router.get("/showPets", async(req, res) => {
 			let owner = await pets[0].getOwner()
 			console.log(owner)
 
-			res.render('pets', { allPets: pets })
+			res.render('pet', { allPets: pets })
 		}
 	} catch(ex) {
 		res.render("error", {

@@ -76,7 +76,7 @@ router.post('/addUser', async (req, res) => {
 			last_name: req.body.last_name,
 			email: req.body.email,
 			password_salt: password_salt.digest('hex'),
-			password_hash: password_has.digest('hex')
+			password_hash: password_hash.digest('hex')
 		})
 
 		await newUser.save()

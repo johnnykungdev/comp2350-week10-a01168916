@@ -14,5 +14,8 @@
 		"uuid": "^8.3.2"
 	},
 	"author": "Patrick",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"sequelize-cli": "^6.2.0"
+	}
 }

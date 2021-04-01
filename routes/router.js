@@ -2,8 +2,11 @@ const router = require('express').Router();
 // const database = include('databaseConnection');
 // const dbModel = include('databaseAccessLayer');
 //const dbModel = include('staticData');
+const crypto = require("crypto")
+const { v4: uuid } = require("uuid")
 const userModel = include('models/web_user')
 const petModel = include('models/pet')
+const passwordPepper = "SeCretPeppa4MySal+"
 
 router.get('/', async (req, res) => {
 	console.log("page hit");
